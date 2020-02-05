@@ -6,6 +6,18 @@
     <AssemblyName>CMSI.Application</AssemblyName>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="Prism.Unity" Version="7.2.0.1367" />
+    <None Remove="CadenaConexion\Conexiones.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="CadenaConexion\Conexiones.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="3.1.1" />
+    <PackageReference Include="Prism.Unity" Version="7.2.0.1422" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CMSI.Utilidades\CMSI.Utilidades.csproj" />
   </ItemGroup>
 </Project>

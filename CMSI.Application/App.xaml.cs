@@ -1,5 +1,5 @@
-﻿using Prism.Ioc;
-using CMSI.Application.Views;
+﻿using CMSI.Application.Views;
+using Prism.Ioc;
 using System.Windows;
 
 namespace CMSI.Application
