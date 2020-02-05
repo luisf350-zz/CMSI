@@ -1,19 +1,15 @@
-﻿using Prism.Mvvm;
-
-namespace CMSI.Application.ViewModels
+﻿namespace CMSI.Application.ViewModels
 {
-    public class MainWindowViewModel : BindableBase
+    public class MainWindowViewModel : ViewModelBase
     {
-        private string _title = "Prism Application";
-        public string Title
-        {
-            get => _title;
-            set => SetProperty(ref _title, value);
-        }
+
+        #region Constructor
 
         public MainWindowViewModel()
         {
-
+            Title = "Casa Medica de la Salud";
         }
+
+        #endregion
     }
 }
