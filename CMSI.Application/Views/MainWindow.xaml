@@ -10,7 +10,7 @@
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto" />
             <RowDefinition Height="Auto" />
-            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
         </Grid.RowDefinitions>
 
         <Grid Grid.Row="0">
@@ -22,21 +22,67 @@
 
             <Image Grid.Column="0" />
 
-            <StackPanel Grid.Column="2" HorizontalAlignment="Right">
+            <!--<StackPanel Grid.Column="2" HorizontalAlignment="Right">
                 <TextBlock Text="Usuario" />
                 <TextBlock Text="Version" />
-            </StackPanel>
+            </StackPanel>-->
 
         </Grid>
 
         <Menu Grid.Row="1">
             <MenuItem Header="Maestros">
-                <MenuItem Header="Pacientes" />
-                <MenuItem Header="Municipios" />
+                <MenuItem
+                    Command="{Binding OpcionMenuCommand}"
+                    CommandParameter="Medicamentos"
+                    Header="Medicamentos" />
+                <MenuItem
+                    Command="{Binding OpcionMenuCommand}"
+                    CommandParameter="Municipios"
+                    Header="Municipios" />
+                <MenuItem
+                    Command="{Binding OpcionMenuCommand}"
+                    CommandParameter="Pacientes"
+                    Header="Pacientes" />
+                <MenuItem
+                    Command="{Binding OpcionMenuCommand}"
+                    CommandParameter="Procedimientos"
+                    Header="Procedimientos" />
+                <MenuItem
+                    Command="{Binding OpcionMenuCommand}"
+                    CommandParameter="Profesionales"
+                    Header="Profesionales" />
+                <MenuItem
+                    Command="{Binding OpcionMenuCommand}"
+                    CommandParameter="Tipo Documentos"
+                    Header="Tipo Documentos" />
+
             </MenuItem>
-            <MenuItem Header="Informes" />
+            <MenuItem Header="Procesos">
+                <MenuItem Header="Cuadre Diario" />
+            </MenuItem>
+            <MenuItem Header="Informes">
+                <MenuItem Header="Pacientes" />
+                <MenuItem Header="Ventas" />
+            </MenuItem>
             <MenuItem Header="Administración" />
         </Menu>
-        <TabControl Grid.Row="2" />
+
+        <TabControl
+            Grid.Row="2"
+            ItemsSource="{Binding Tabs}"
+            SelectedItem="{Binding TabSelected, Mode=TwoWay}">
+            <TabControl.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Width="80" Text="{Binding Header}" />
+                    </StackPanel>
+                </DataTemplate>
+            </TabControl.ItemTemplate>
+            <TabControl.ContentTemplate>
+                <DataTemplate>
+                    <UserControl Margin="5" Content="{Binding Content}" />
+                </DataTemplate>
+            </TabControl.ContentTemplate>
+        </TabControl>
     </Grid>
 </Window>

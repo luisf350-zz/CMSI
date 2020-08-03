@@ -1,4 +1,5 @@
-﻿using System.Windows;
+﻿using CMSI.Application.ViewModels;
+using System.Windows;
 
 namespace CMSI.Application.Views
 {

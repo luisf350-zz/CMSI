@@ -1,9 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Cadenas>
   <Publicacion>
-    <valor>Server=LENOVO\SQLSERVER2017;Database=dbCMSI;Trusted_Connection=True;</valor>
+    <valor>Server=(localdb)\MSSQLLocalDB;Database=dbCMSI;Trusted_Connection=True;</valor>
   </Publicacion>
   <Luis>
     <valor>Server=LENOVO\SQLSERVER2017;Database=dbCMSI;Trusted_Connection=True;</valor>
   </Luis>
+  <HP-Laptop>
+    <valor>Server=(localdb)\MSSQLLocalDB;Database=dbCMSI;Trusted_Connection=True;</valor>
+  </HP-Laptop>
 </Cadenas>
